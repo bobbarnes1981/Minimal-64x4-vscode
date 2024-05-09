@@ -52,7 +52,7 @@
 		"comments": {
 			"patterns": [{
 				"name": "comment.single.m64x4asm",
-				"match": ";[\\S ]+"
+				"match": ";[\\S ]*"
 			}]
 		},
 		"punctuations": {
