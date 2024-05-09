@@ -1,6 +1,6 @@
 # m64x4asm README
 
-This is the README for your extension "m64x4asm". After writing up a brief description, we recommend including the following sections.
+Language and Grammar contributions for VSCODE to syntax highlight Minimal 64x4 Assembly Language
 
 ## Features
 
