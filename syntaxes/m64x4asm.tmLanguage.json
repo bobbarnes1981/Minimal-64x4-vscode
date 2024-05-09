@@ -1,0 +1,150 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Minimal 64x4 Assembly Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#punctuations"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#metas"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.other.m64x4asm",
+				"match": "(#emit|#mute|#page|#org)"
+			}]
+		},
+		"constants":{
+			"patterns": [{
+				"name": "constant.numeric.hex.m64x4asm",
+				"match": "\\b0[Xx][A-Fa-f0-9]{2,4}\\b"
+			},{
+				"name": "constant.numeric.integer.m64x4asm",
+				"match": "\\b[0-9]+\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.m64x4asm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.m64x4asm",
+				"match": "\\\\."
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.single.m64x4asm",
+				"match": ";[\\S ]+"
+			}]
+		},
+		"punctuations": {
+			"patterns": [{
+				"name": "punctuation.separator.m64x4asm",
+				"match": ","
+			}]
+		},
+		"entities": {
+			"patterns": [{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(NOP|OUT|INT|INK|WIN|SEC|CLC)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(LL0|LL1|LL2|LL3|LL4|LL5|LL6|LL7|RL0|RL1|RL2|RL3|RL4|RL5|RL6|RL7|RR1|LR0|LR1|LR2|LR3|LR4|LR5|LR6|LR7)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(LLZ|LLB|LLV|LLW|LLQ|LLL|LRZ|LRB|RLZ|RLB|RLV|RLW|RLQ|RLL|RRZ|RRB)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(NOT|NOZ|NOB|NOV|NOW|NOQ|NOL)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(NEG|NEZ|NEB|NEV|NEW|NEQ|NEL)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(ANI|ANZ|ANB|ANT|ANR|AN\\.Z|AN\\.B)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(ORI|ORZ|ORB|ORT|ORR|OR\\.Z|OR\\.B)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(XRI|XRZ|XRB|XRT|XRR|XR\\.Z|XR\\.B)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(FNE|FEQ|FCC|FCS|FPL|FMI|FGT|FLE|FPA)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(BNE|BEQ|BCC|BCS|BPL|BMI|BGT|BLE|JPA|JPR|JAR)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(JPS|JAS|RTS|PHS|PLS|LDS|STS)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(RDB|RDR|RAP|RZP)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(WDB|WDR)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(LDI|LDZ|LDB|LDT|LDR|LAP|LAB|LZP|LZB)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(STZ|STB|STT|STR|SZP)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(MIZ|MIB|MIT|MIR|MIV|MIW|MZZ|MZB|MBZ|MBB|MVV|MWV)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(CLZ|CLB|CLV|CLW|CLQ|CLL)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(INC|INZ|INB|INV|INW|INQ|INL)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(DEC|DEZ|DEB|DEV|DEW|DEQ|DEL)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(ADI)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(SUI)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(CPI|CPZ|CPB|CPT|CPR|CIZ|CIB|CIT|CIR|CZZ|CZB|CBZ|CBB)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(ACI|ACZ|ACB|AC\\.Z|AC\\.B|ACV|ACW)\\b"
+			},{
+				"name": "entity.name.function.m64x4asm",
+				"match": "\\b(SCI|SCZ|SCB|SC\\.Z|SC\\.B|SCV|SCW)\\b"
+			}]
+		},
+		"metas": {
+			"patterns": [{
+				"name": "variable.name.m64x4asm",
+				"match": "([A-Za-z]+:)"
+			},{
+				"name": "variable.other.m64x4asm",
+				"match": "([A-Za-z]+)"
+			}]
+		}
+	},
+	"scopeName": "source.asm"
+}

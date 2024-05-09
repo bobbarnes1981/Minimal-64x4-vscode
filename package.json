@@ -1,0 +1,25 @@
+{
+  "name": "m64x4asm",
+  "displayName": "m64x4asm",
+  "description": "Minimal 64x4 Assembly Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "m64x4asm",
+      "aliases": ["Minimal 64x4 Assembly Language", "m64x4asm"],
+      "extensions": [".asm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "m64x4asm",
+      "scopeName": "source.asm",
+      "path": "./syntaxes/m64x4asm.tmLanguage.json"
+    }]
+  }
+}
