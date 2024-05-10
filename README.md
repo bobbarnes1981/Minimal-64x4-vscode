@@ -2,6 +2,12 @@
 
 Language and Grammar contributions for VSCODE to syntax highlight Minimal 64x4 Assembly Language
 
+## TODO
+
+* HoverProvider that provides opcode information
+* Autocomplete?
+* Fiagnostics to show when arguments are incorrect?
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
