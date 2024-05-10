@@ -121,7 +121,7 @@
 				"match": "\\b(DEC|DEZ|DEB|DEV|DEW|DEQ|DEL)\\b"
 			},{
 				"name": "entity.name.function.m64x4asm",
-				"match": "\\b(ADI|ADZ|ADB|ADT|ADR|AD\\.Z|AD\\.B|AD\\.T|AD\\.R|ADV|ADW|ADQ|ADL||AIZ|AIB|AIT|AIR|AIV|AIW|AIQ|AIL|AZZ|AZB|AZV|AZW|AZQ|AZL|ABZ|ABB|ABV|ABW|ABQ|AVV)\\b"
+				"match": "\\b(ADI|ADZ|ADB|ADT|ADR|AD\\.Z|AD\\.B|AD\\.T|AD\\.R|ADV|ADW|ADQ|ADL|AIZ|AIB|AIT|AIR|AIV|AIW|AIQ|AIL|AZZ|AZB|AZV|AZW|AZQ|AZL|ABZ|ABB|ABV|ABW|ABQ|AVV)\\b"
 			},{
 				"name": "entity.name.function.m64x4asm",
 				"match": "\\b(SUI|SUZ|SUB|SUT|SUR|SU\\.Z|SU\\.B|SU\\.T|SU\\.R|SUV|SUW|SUQ|SU\\.L|SIZ|SIB|SIT|SIR|SIV|SIW|SIQ|SIL|SZZ|SZB|SZV|SZW|SZQ|SZL|SBZ|SBB|SBV|SBW|SBQ|SVV)\\b"
