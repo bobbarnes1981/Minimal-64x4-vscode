@@ -6,7 +6,7 @@ Language and Grammar contributions for VSCODE to syntax highlight Minimal 64x4 A
 
 * HoverProvider that provides opcode information
 * Autocomplete?
-* Fiagnostics to show when arguments are incorrect?
+* Diagnostics to show when arguments are incorrect?
 
 ## Screenshot
 
