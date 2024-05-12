@@ -142,10 +142,10 @@
 		"metas": {
 			"patterns": [{
 				"name": "variable.name.m64x4asm",
-				"match": "([A-Za-z]+:)"
+				"match": "([A-Za-z_0-9]+:)"
 			},{
 				"name": "variable.other.m64x4asm",
-				"match": "([A-Za-z]+)"
+				"match": "([A-Za-z_0-9]+)"
 			}]
 		}
 	},
