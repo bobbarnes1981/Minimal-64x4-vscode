@@ -41,12 +41,15 @@
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.m64x4asm",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [{
+				"name": "string.quoted.double.m64x4asm",
+				"match": "\".*\""
+			},{
 				"name": "constant.character.escape.m64x4asm",
 				"match": "\\\\."
+			},{
+				"name": "string.quoted.single.m64x4asm",
+				"match": "'.*'"
 			}]
 		},
 		"comments": {
