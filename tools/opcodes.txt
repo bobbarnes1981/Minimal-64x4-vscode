@@ -1,0 +1,2816 @@
+0
+0x00
+NOP
+No operation
+-
+-
+-
+-
+-
+-
+16
+1
+0x01
+OUT
+Output A to UART: UART = A
+-
+-
+-
+1
+0
+0
+2
+2
+0x02
+INT
+Read UART input to A: A = UART
+-
+-
+R
+?
+?
+?
+3
+3
+0x03
+INK
+Read PS/2 input to A: A = PS2
+-
+-
+R
+?
+?
+?
+3/4
+4
+0x04
+WIN
+Wait for input
+-
+-
+-
+?
+?
+?
+2..6
+5
+0x05
+SEC
+Set carry flag (C=1)
+-
+-
+-
+0
+1
+0
+3
+6
+0x06
+CLC
+Clear carry flag (C=0)
+-
+-
+-
+1
+0
+0
+3
+7
+0x07
+LL0
+Logical left-shift A 0 steps (C=0)
+-
+-
+-
+-
+-
+-
+2
+8
+0x08
+LL1
+Logical left-shift A 1 step (C=0)
+-
+-
+R
+R
+R
+R
+3
+9
+0x09
+LL2
+Logical left-shift A 2 steps (C=0)
+-
+-
+R
+R
+R
+R
+4
+10
+0x0a
+LL3
+Logical left-shift A 3 steps (C=0)
+-
+-
+R
+R
+R
+R
+5
+11
+0x0b
+LL4
+Logical left-shift A 4 steps (C=0)
+-
+-
+R
+R
+R
+R
+6
+12
+0x0c
+LL5
+Logical left-shift A 5 steps (C=0)
+-
+-
+R
+R
+R
+R
+7
+13
+0x0d
+LL6
+Logical left-shift A 6 steps (C=0)
+-
+-
+R
+R
+R
+R
+8
+14
+0x0e
+LL7
+Logical left-shift A 7 steps (C=0)
+-
+-
+R
+R
+R
+R
+9
+15
+0x0f
+RL0
+Rotate left A 0 steps via C (= RR9)
+-
+-
+-
+-
+-
+-
+2
+16
+0x10
+RL1
+Rotate left A 1 step via C (= RR8)
+-
+-
+R
+R
+R
+R
+3
+17
+0x11
+RL2
+Rotate left A 2 steps via C (= RR7)
+-
+-
+R
+R
+R
+R
+4
+18
+0x12
+RL3
+Rotate left A 3 steps via C (= RR6)
+-
+-
+R
+R
+R
+R
+5
+19
+0x13
+RL4
+Rotate left A 4 steps via C (= RR5)
+-
+-
+R
+R
+R
+R
+6
+20
+0x14
+RL5
+Rotate left A 5 steps via C (= RR4)
+-
+-
+R
+R
+R
+R
+7
+21
+0x15
+RL6
+Rotate left A 6 steps via C (= RR3)
+-
+-
+R
+R
+R
+R
+8
+22
+0x16
+RL7
+Rotate left A 7 steps via C (= RR2)
+-
+-
+R
+R
+R
+R
+9
+23
+0x17
+RR1
+Rotate right A 1 step via C (= RL8)
+-
+-
+R
+R
+R
+R
+10
+24
+0x18
+LR0
+Logical right-shift A 0 steps (C=0) (= RR0, RL9)
+-
+-
+-
+-
+-
+-
+2
+25
+0x19
+LR1
+Logical right-shift A 1 step (C=0)
+-
+-
+R
+R
+R
+R
+10
+26
+0x1a
+LR2
+Logical right-shift A 2 steps (C=0)                 §
+-
+-
+R
+R
+R
+R
+15
+27
+0x1b
+LR3
+Logical right-shift A 3 steps (C=0)                 §
+-
+-
+R
+R
+R
+R
+15
+28
+0x1c
+LR4
+Logical right-shift A 4 steps (C=0)                 §
+-
+-
+R
+R
+R
+R
+15
+29
+0x1d
+LR5
+Logical right-shift A 5 steps (C=0)                 §
+-
+-
+R
+R
+R
+R
+15
+30
+0x1e
+LR6
+Logical right-shift A 6 steps (C=0)                 §
+-
+-
+R
+R
+R
+R
+13
+31
+0x1f
+LR7
+Logical right-shift A 7 steps (C=0)
+-
+-
+R
+R
+R
+R
+5
+32
+0x20
+LLZ
+Logical shift left *Z 1 step (C=0)
+Z
+1
+R
+R
+R
+R
+4
+33
+0x21
+LLB
+Logical shift byte left 1 step (C=0)
+addr
+2
+R
+R
+R
+R
+6
+34
+0x22
+LLV
+Logical shift fast word left 1 step (C=0)
+V
+1
+M
+M
+M
+M
+6
+35
+0x23
+LLW
+Logical shift word left 1 step (C=0)
+addr
+2
+M
+M
+M
+M
+8
+36
+0x24
+LLQ
+Logical shift fast long left 1 step (C=0)
+Q
+1
+M
+M
+M
+M
+10
+37
+0x25
+LLL
+Logical shift long left 1 step (C=0)
+addr
+2
+M
+M
+M
+M
+12
+38
+0x26
+LRZ
+Logical shift right zero-page byte 1 step (C=0)
+Z
+1
+R
+R
+R
+R
+11
+39
+0x27
+LRB
+Logical shift right abs byte 1 step (C=0)
+addr
+2
+R
+R
+R
+R
+13
+40
+0x28
+RLZ
+Rotate left zero-page byte 1 step via C
+Z
+1
+R
+R
+R
+R
+4
+41
+0x29
+RLB
+Rotate left byte at abs addr 1 step via C
+addr
+2
+R
+R
+R
+R
+6
+42
+0x2a
+RLV
+Rotate left zero-page word 1 step via C
+V
+1
+M
+M
+M
+M
+6
+43
+0x2b
+RLW
+Rotate left word at abs addr 1 step via C
+addr
+2
+M
+M
+M
+M
+8
+44
+0x2c
+RLQ
+Rotate left zero-page long 1 step via C
+Q
+1
+M
+M
+M
+M
+10
+45
+0x2d
+RLL
+Rotate left abs long 1 step via C
+addr
+2
+M
+M
+M
+M
+12
+46
+0x2e
+RRZ
+Rotate right zero-page byte 1 step via C
+Z
+1
+R
+R
+R
+R
+11
+47
+0x2f
+RRB
+Rotate right byte at abs addr 1 step via C
+addr
+2
+R
+R
+R
+R
+13
+48
+0x30
+NOT
+Bitwise NOT A: A = ~A
+-
+-
+R
+-
+-
+-
+4
+49
+0x31
+NOZ
+Bitwise NOT *Z: *Z = ~(*Z)
+Z
+1
+R
+-
+-
+-
+5
+50
+0x32
+NOB
+Bitwise NOT byte: *addr = ~(*addr)
+addr
+2
+R
+-
+-
+-
+7
+51
+0x33
+NOV
+Bitwise NOT zero-page word: *V = ~(*V)
+V
+1
+M
+-
+-
+-
+7
+52
+0x34
+NOW
+Bitwise NOT word at abs address
+addr
+2
+M
+-
+-
+-
+9
+53
+0x35
+NOQ
+Bitwise NOT zero-page long
+Q
+1
+M
+-
+-
+-
+11
+54
+0x36
+NOL
+Bitwise NOT long at abs address
+addr
+2
+M
+-
+-
+-
+13
+55
+0x37
+NEG
+Negate A: A = -A
+-
+-
+R
+R
+Z
+R
+4
+56
+0x38
+NEZ
+Negate zero-page byte: *Z = -(*Z)
+Z
+1
+R
+R
+Z
+R
+5
+57
+0x39
+NEB
+Negate byte at abs address: *addr = -(*addr)
+addr
+2
+R
+R
+Z
+R
+7
+58
+0x3a
+NEV
+Negate zero-page word (C = 1 only if word=0)
+V
+1
+M
+M
+Z
+M
+7
+59
+0x3b
+NEW
+Negate word at abs address (C = 1 only if word=0)
+addr
+2
+M
+M
+Z
+M
+9
+60
+0x3c
+NEQ
+Negate zero-page long (C = 1 only if long = 0)
+Q
+1
+M
+M
+Z
+M
+11
+61
+0x3d
+NEL
+Negate long (C = 1 only if long = 0)
+addr
+2
+M
+M
+Z
+M
+13
+62
+0x3e
+ANI
+Bitwise AND: A = A & imm
+imm
+1
+R
+-
+-
+-
+3
+63
+0x3f
+ANZ
+Bitwise AND: A = A & *Z
+Z
+1
+R
+-
+-
+-
+4
+64
+0x40
+ANB
+Bitwise AND: A = A & *addr
+addr
+2
+R
+-
+-
+-
+6
+65
+0x41
+ANT
+Bitwise AND: A = A & *(*Z)
+rel Z
+1
+R
+-
+-
+-
+7
+66
+0x42
+ANR
+Bitwise AND: A = A & *(*addr)
+rel addr
+2
+R
+-
+-
+-
+9
+67
+0x43
+AN.Z
+Bitwise AND: *Z = *Z & A
+Z
+1
+R
+-
+-
+-
+4
+68
+0x44
+AN.B
+Bitwise AND: *addr = *addr & A
+addr
+2
+R
+-
+-
+-
+6
+69
+0x45
+ORI
+Bitwise OR: A = A | imm
+imm
+1
+R
+-
+-
+-
+3
+70
+0x46
+ORZ
+Bitwise OR: A = A | *Z
+Z
+1
+R
+-
+-
+-
+4
+71
+0x47
+ORB
+Bitwise OR: A = A | *addr
+addr
+2
+R
+-
+-
+-
+6
+72
+0x48
+ORT
+Bitwise OR: A = A | *(*Z)
+rel Z
+1
+R
+-
+-
+-
+7
+73
+0x49
+ORR
+Bitwise OR: A = A | *(*addr)
+rel addr
+2
+R
+-
+-
+-
+9
+74
+0x4a
+OR.Z
+Bitwise OR: *Z = *Z | A
+Z
+1
+R
+-
+-
+-
+4
+75
+0x4b
+OR.B
+Bitwise OR: *addr = *addr | A
+addr
+2
+R
+-
+-
+-
+6
+76
+0x4c
+XRI
+Bitwise XOR: A = A ^ imm                            §
+imm
+1
+R
+-
+-
+-
+9
+77
+0x4d
+XRZ
+Bitwise XOR: A = A ^ *Z
+Z
+1
+R
+-
+-
+-
+10
+78
+0x4e
+XRB
+Bitwise XOR: A = A ^ * addr                         §
+addr
+2
+R
+-
+-
+-
+12
+79
+0x4f
+XRT
+Bitwise XOR: A = A ^ *(*Z)
+rel Z
+1
+R
+-
+-
+-
+13
+80
+0x50
+XRR
+Bitwise XOR: A = A ^ *(*addr)                       §
+rel addr
+2
+R
+-
+-
+-
+15
+81
+0x51
+XR.Z
+Bitwise XOR: *Z = *Z ^ A
+Z
+1
+R
+-
+-
+-
+9
+82
+0x52
+XR.B
+Bitwise XOR: *addr = *addr ^ A
+addr
+2
+R
+-
+-
+-
+11
+83
+0x53
+FNE
+Fast branch on non-zero
+addr lsb
+1
+-
+-
+-
+-
+2
+84
+0x54
+FEQ
+Fast branch on zero
+addr lsb
+1
+-
+-
+-
+-
+2
+85
+0x55
+FCC
+Fast branch on carry clear
+addr lsb
+1
+-
+-
+-
+-
+2
+86
+0x56
+FCS
+Fast branch on carry set
+addr lsb
+1
+-
+-
+-
+-
+2
+87
+0x57
+FPL
+Fast branch on plus
+addr lsb
+1
+-
+-
+-
+-
+2
+88
+0x58
+FMI
+Fast branch on minus
+addr lsb
+1
+-
+-
+-
+-
+2
+89
+0x59
+FGT
+Fast branch on greater
+addr lsb
+1
+-
+-
+-
+-
+2
+90
+0x5a
+FLE
+Fast branch on less or equal
+addr lsb
+1
+-
+-
+-
+-
+2
+91
+0x5b
+FPA
+Fast jump to lsb addr
+addr lsb
+1
+-
+-
+-
+-
+2
+92
+0x5c
+BNE
+Branch on non-zero
+addr
+2
+-
+-
+-
+-
+4/3
+93
+0x5d
+BEQ
+Branch on zero
+addr
+2
+-
+-
+-
+-
+4/3
+94
+0x5e
+BCC
+Branch on carry clear
+addr
+2
+-
+-
+-
+-
+4/3
+95
+0x5f
+BCS
+Branch on carry set
+addr
+2
+-
+-
+-
+-
+4/3
+96
+0x60
+BPL
+Branch on plus
+addr
+2
+-
+-
+-
+-
+4/3
+97
+0x61
+BMI
+Branch on minus
+addr
+2
+-
+-
+-
+-
+4/3
+98
+0x62
+BGT
+Branch on greater
+addr
+2
+-
+-
+-
+-
+4/3
+99
+0x63
+BLE
+Branch on less or equal
+addr
+2
+-
+-
+-
+-
+4/3
+100
+0x64
+JPA
+Jump to abs address: PC = addr
+addr
+2
+-
+-
+-
+-
+4
+101
+0x65
+JPR
+Jump to rel address: PC = *addr
+rel addr
+2
+-
+-
+-
+-
+7
+102
+0x66
+JAR
+Jump A-indexed to rel address: PC = *(addr + A)
+rel addr
+2
+-
+-
+-
+-
+7/9
+103
+0x67
+JPS
+Jump to subroutine
+addr
+2
+?
+-
+-
+-
+11
+104
+0x68
+JAS
+Jump to subroutine conserving A                     §
+addr
+2
+-
+-
+-
+-
+14
+105
+0x69
+RTS
+Return from subroutine
+-
+-
+-
+-
+-
+-
+10
+106
+0x6a
+PHS
+Push A onto stack
+-
+-
+-
+-
+-
+-
+8
+107
+0x6b
+PLS
+Pull A from stack
+-
+-
+R
+-
+-
+-
+6
+108
+0x6c
+LDS
+Load from stack: A = *(0xff00 + SP + off)
+offset
+1
+R
+-
+-
+-
+6
+109
+0x6d
+STS
+Store on stack: *(0xff00 + SP + off) = A
+offset
+1
+-
+-
+-
+-
+11
+110
+0x6e
+RDB
+Read FLASH data from abs 3-byte address
+addr,bnk
+2,1
+R
+-
+-
+-
+8
+111
+0x6f
+RDR
+Read FLASH data from rel 3-byte address
+rel addr
+2
+R
+-
+-
+-
+11
+112
+0x70
+RAP
+Read A-indexed FLASH data: A = *(pg<<8 + A)  
+pg,bnk
+1,1
+R
+-
+-
+-
+7
+113
+0x71
+RZP
+Read Z-indexed FLASH data: A = *(pg<<8 + *Z)
+Z,pg,bnk 
+1,1,1
+R
+-
+-
+-
+9
+114
+0x72
+WDB
+Write FLASH data to abs 3-byte address              §
+addr,bnk
+2,1
+-
+-
+-
+-
+14
+115
+0x73
+WDR
+Write FLASH data to rel 3-byte address              §
+rel addr
+2
+-
+-
+-
+-
+16
+116
+0x74
+LDI
+Load A immediate: A = imm
+imm
+1
+R
+-
+-
+-
+2
+117
+0x75
+LDZ
+Load A from Z: A = *Z
+Z
+1
+R
+-
+-
+-
+3
+118
+0x76
+LDB
+Load A from abs address: A = *addr
+addr
+2
+R
+-
+-
+-
+5
+119
+0x77
+LDT
+Load A from rel address in zero page: A = *(*Z)
+rel Z
+1
+R
+-
+-
+-
+6
+120
+0x78
+LDR
+Load A from relative address: A = *(*addr)
+rel addr
+2
+R
+-
+-
+-
+8
+121
+0x79
+LAP
+Load A A-indexed from page: A = *(pg<<8 + A)
+pg
+1
+R
+-
+-
+-
+4
+122
+0x7a
+LAB
+Load A A-indexed from addr: A = *(addr + A)
+addr
+2
+R
+-
+-
+-
+5/7
+123
+0x7b
+LZP
+Load A Z-indexed from page: A = *(pg<<8 + *Z)
+Z,pg
+1,1
+R
+-
+-
+-
+6
+124
+0x7c
+LZB
+Load A Z-indexed from addr: A = *(addr + *Z)
+Z,addr
+1,2
+R
+-
+-
+-
+7/9
+125
+0x7d
+STZ
+Store A to Z: *Z = A
+Z
+1
+-
+-
+-
+-
+3
+126
+0x7e
+STB
+Store A to address: *addr = A
+addr
+2
+-
+-
+-
+-
+5
+127
+0x7f
+STT
+Store A at rel address in zero page: *(*Z) = A
+rel Z
+1
+-
+-
+-
+-
+6
+128
+0x80
+STR
+Store A at relative address: *(*addr) = A
+rel addr
+2
+-
+-
+-
+-
+8
+129
+0x81
+SZP
+Store A Z-indexed to page: *(pg<<8 + *Z) = A
+Z,pg
+1,1
+-
+-
+-
+-
+6
+130
+0x82
+MIZ
+Move imm byte to zero-page: *Z = imm
+imm,Z 
+1,1
+R
+R
+R
+R
+4
+131
+0x83
+MIB
+Move imm byte to abs addr: *addr = imm
+imm,addr
+1,2
+R
+-
+-
+-
+6
+132
+0x84
+MIT
+Move imm byte to rel zero-page addr: *(*T) = imm
+imm,rel Z
+1,1
+R
+-
+-
+-
+7
+133
+0x85
+MIR
+Move imm byte to rel addr: *(*addr) = imm
+imm,rel
+1,2
+R
+-
+-
+-
+9
+134
+0x86
+MIV
+Move imm word to zero-page word: *V = imm
+imm,V
+2,1
+M
+-
+-
+-
+6
+135
+0x87
+MIW
+Move imm word to abs addr: *addr = imm
+imm,addr
+2,2
+M
+-
+-
+-
+13
+136
+0x88
+MZZ
+Move zero-page byte to zero-page byte: *Z2 = *Z1
+Z1,Z2
+1,1
+R
+-
+-
+-
+5
+137
+0x89
+MZB
+Move zero-page byte to abs addr: *addr = *Z
+Z,addr
+1,2
+R
+-
+-
+-
+7
+138
+0x8a
+MBZ
+Move byte at abs addr to zero-page: *Z = *addr
+addr,Z
+2,1
+R
+-
+-
+-
+7
+139
+0x8b
+MBB
+Move byte from abs adr1 to abs adr2: *adr2 = *adr1
+adr1,adr2
+2,2
+R
+-
+-
+-
+9
+140
+0x8c
+MVV
+Move zero-page word to zero-page word: *V2 = *V1
+V1,V2
+1,1
+M
+-
+-
+-
+7
+141
+0x8d
+MWV
+Move word at abs addr to fast word: *V = *addr
+addr,V
+2,1
+M
+-
+-
+-
+9
+142
+0x8e
+CLZ
+Clear Z: *Z = 0x00
+Z
+1
+-
+-
+-
+-
+4
+143
+0x8f
+CLB
+Clear byte at addr: *addr = 0x00
+addr
+2
+-
+-
+-
+-
+6
+144
+0x90
+CLV
+Clear fast word: *V = 0x0000
+V
+1
+-
+-
+-
+-
+5
+145
+0x91
+CLW
+Clear word at addr: *addr = 0x0000
+addr
+2
+0
+-
+-
+-
+7
+146
+0x92
+CLQ
+Clear zero-page long: *Q = 0x00000000
+Q
+1
+-
+-
+-
+-
+7
+147
+0x93
+CLL
+Clear long: *addr = 0x00000000
+addr
+2
+0
+-
+-
+-
+11
+148
+0x94
+INC
+Increment A: A = A + 1
+-
+-
+R
+R
+R
+R
+3
+149
+0x95
+INZ
+Increment zero-page byte: *Z = *Z + 1
+Z
+1
+R
+R
+R
+R
+5
+150
+0x96
+INB
+Increment byte at abs addr: *addr = *addr + 1
+addr
+2
+R
+R
+R
+R
+7
+151
+0x97
+INV
+Increment zero-page word: *V = *V + 0x0001
+V
+1
+M
+M
+M
+M
+7
+152
+0x98
+INW
+Increment word at abs addr: *addr = *addr + 0x0001
+addr
+2
+M
+M
+M
+M
+9
+153
+0x99
+INQ
+Increment zero-page long: *Q = *Q + 0x00000001
+Q
+1
+?
+?
+?
+?
+6..11
+154
+0x9a
+INL
+Increment long: *addr = *addr + 0x00000001
+addr
+2
+?
+?
+?
+?
+8..13
+155
+0x9b
+DEC
+Decrement A: A = A - 1
+-
+-
+R
+R
+R
+R
+3
+156
+0x9c
+DEZ
+Decrement *Z = *Z - 1
+Z
+1
+R
+R
+R
+R
+5
+157
+0x9d
+DEB
+Decrement byte: *addr = *addr - 1
+addr
+2
+R
+R
+R
+R
+7
+158
+0x9e
+DEV
+Decrement zero-page word: *V = *V - 0x0001
+V
+1
+M
+M
+M
+M
+7
+159
+0x9f
+DEW
+Decrement word at abs addr: *addr = *addr - 0x0001
+addr
+2
+M
+M
+M
+M
+9
+160
+0xa0
+DEQ
+Decrement zero-page long: *Q = *Q - 0x00000001
+Q
+1
+?
+?
+?
+?
+6..11
+161
+0xa1
+DEL
+Decrement long: *addr = *addr - 0x00000001
+addr
+2
+?
+?
+?
+?
+8..13
+162
+0xa2
+ADI
+Add immediate to A: A = A + imm
+imm
+1
+R
+R
+R
+R
+3
+163
+0xa3
+ADZ
+Add zero-page byte to A: A = A + *Z
+Z
+1
+R
+R
+R
+R
+4
+164
+0xa4
+ADB
+Add byte at addr to A: A = A + *addr
+addr
+2
+R
+R
+R
+R
+6
+165
+0xa5
+ADT
+Add byte at rel zero-page addr to A: A = A + *(*Z)
+rel Z
+1
+R
+R
+R
+R
+7
+166
+0xa6
+ADR
+Add byte at rel addr to A: A = A + *(*addr)
+rel addr
+2
+R
+R
+R
+R
+9
+167
+0xa7
+AD.Z
+Add A to zero-page byte: *Z = *Z + A
+Z
+1
+R
+R
+R
+R
+4
+168
+0xa8
+AD.B
+Add A to byte at abs addr: *addr = *addr + A
+addr
+2
+R
+R
+R
+R
+6
+169
+0xa9
+AD.T
+Add A to rel zero-page address: *(*Z) = *(*Z) + A
+rel Z
+1
+R
+R
+R
+R
+7
+170
+0xaa
+AD.R
+Add A to rel address: *(*addr) = *(*addr) + A
+rel addr
+2
+R
+R
+R
+R
+9
+171
+0xab
+ADV
+Add A to zero-page word: *V = *V + A
+V
+1
+M
+M
+M
+M
+7
+172
+0xac
+ADW
+Add A to word at abs addr: *addr = *addr + A
+addr
+2
+M
+M
+M
+M
+9
+173
+0xad
+ADQ
+Add A to zero-page long: *Q = *Q + A
+Q
+1
+?
+?
+?
+?
+5..11
+174
+0xae
+ADL
+Add A to long: *addr = *addr + A
+addr
+2
+?
+?
+?
+?
+7..13
+175
+0xaf
+AIZ
+Add immediate to zero-page byte: *Z = *Z + imm
+imm,Z
+1,1
+R
+R
+R
+R
+5
+176
+0xb0
+AIB
+Add imm to byte at abs addr: *addr = *addr + imm
+imm,addr
+1,2
+R
+R
+R
+R
+7
+177
+0xb1
+AIT
+Add imm to byte at rel Z addr: *(*Z) = *(*Z) + imm
+imm,rel Z 
+1,1
+R
+R
+R
+R
+8
+178
+0xb2
+AIR
+Add imm to byte at rel addr: *(*adr) = *(*adr) + imm
+imm,rel
+1,2
+R
+R
+R
+R
+10
+179
+0xb3
+AIV
+Add immediate byte to zero-page word: *V = *V + imm
+imm,V
+1,1
+R
+R
+R
+R
+8
+180
+0xb4
+AIW
+Add imm byte to abs word: *addr = *addr + imm
+imm,addr
+1,2
+M
+M
+M
+M
+10
+181
+0xb5
+AIQ
+Add immediate byte to zero-page long: *Q = *Q + imm
+imm,Q
+1,1
+?
+?
+?
+?
+6..12
+182
+0xb6
+AIL
+Add immediate byte to long: *L = *L + imm
+imm,addr
+1,2
+?
+?
+?
+?
+8..14
+183
+0xb7
+AZZ
+Add zero-page byte to zero-page byte: *Z2 = *Z2 + *Z1
+Z1,Z2
+1,1
+R
+R
+R
+R
+6
+184
+0xb8
+AZB
+Add zero-page to byte at abs addr: *addr = *addr + *Z
+Z,addr
+1,2
+R
+R
+R
+R
+8
+185
+0xb9
+AZV
+Add zero-page byte to zero-page word: *V = *V + *Z
+Z,V
+1,1
+R
+R
+R
+R
+9
+186
+0xba
+AZW
+Add zero-page byte to word at addr: *addr = *addr + *Z
+Z,addr
+1,2
+M
+M
+M
+M
+11
+187
+0xbb
+AZQ
+Add zero-page byte to zero-page long: *Q = *Q + *Z
+Z,Q
+1,1
+?
+?
+?
+?
+7..13
+188
+0xbc
+AZL
+Add zero-page byte to long: *L = *L + *Z
+Z,addr
+1,2
+?
+?
+?
+?
+9..15
+189
+0xbd
+ABZ
+Add abs byte to zero-page byte: *Z = *Z + *addr
+addr,Z
+2,1
+R
+R
+R
+R
+8
+190
+0xbe
+ABB
+Add abs byte to byte: *adr2 = *adr2 + *adr1
+adr1,adr2
+2,2
+R
+R
+R
+R
+10
+191
+0xbf
+ABV
+Add abs byte to zero-page word: *V = *V + *addr
+addr,V
+2,1
+R
+R
+R
+R
+11
+192
+0xc0
+ABW
+Add byte at ad1 to word at ad2: *ad2 = *ad2 + *ad1
+ad1,ad2
+2,2
+M
+M
+M
+M
+13
+193
+0xc1
+ABQ
+Add abs byte to zero-page long: *Q = *Q + *addr
+addr,Q
+2,1
+?
+?
+?
+?
+9..15
+194
+0xc2
+AVV
+Add zero-page word to zero-page word: *V2 = *V2 + *V1
+V1,V2
+1,1
+M
+R
+R
+R
+14
+195
+0xc3
+SUI
+Sub immediate from A: A = A - imm
+imm
+1
+R
+R
+R
+R
+3
+196
+0xc4
+SUZ
+Sub zero-page byte from A: A = A - *Z
+Z
+1
+R
+R
+R
+R
+4
+197
+0xc5
+SUB
+Sub byte at addr from A: A = A - *addr
+addr
+2
+R
+R
+R
+R
+6
+198
+0xc6
+SUT
+Sub byte at rel zero-page addr from A: A = A - *(*Z)
+rel Z
+1
+R
+R
+R
+R
+7
+199
+0xc7
+SUR
+Sub byte at rel addr from A: A = A - *(*addr)
+rel addr
+2
+R
+R
+R
+R
+9
+200
+0xc8
+SU.Z
+Sub A from zero-page byte: *Z = *Z - A
+Z
+1
+R
+R
+R
+R
+5
+201
+0xc9
+SU.B
+Sub A from byte at abs addr: *addr = *addr - A
+addr
+2
+R
+R
+R
+R
+7
+202
+0xca
+SU.T
+Sub A from rel zero-page address: *(*Z) = *(*Z) - A
+rel Z
+1
+R
+R
+R
+R
+8
+203
+0xcb
+SU.R
+Sub A from byte at rel addr: *(*addr) = *(*addr) - A
+rel addr
+2
+R
+R
+R
+R
+10
+204
+0xcc
+SUV
+Sub A from zero-page word: *v = *V - A
+V
+1
+M
+M
+M
+M
+8
+205
+0xcd
+SUW
+Sub A from word at abs addr: *addr = *addr - A
+addr
+2
+M
+M
+M
+M
+10
+206
+0xce
+SUQ
+Sub A from zero-page long: *Q = *Q - A
+Q
+1
+?
+?
+?
+?
+6..12
+207
+0xcf
+SU.L
+Sub A from long: *addr = *addr - A
+addr
+2
+?
+?
+?
+?
+8..14
+208
+0xd0
+SIZ
+Sub immediate from zero-page byte: *Z = *Z - imm
+imm,Z
+1,1
+R
+R
+R
+R
+5
+209
+0xd1
+SIB
+Sub imm from byte: *addr = *addr - imm
+imm,addr
+1,2
+R
+R
+R
+R
+7
+210
+0xd2
+SIT
+Sub imm from byte at rel Z addr: *(*Z) = *(*Z) + imm
+imm,rel Z
+1,1
+R
+R
+R
+R
+8
+211
+0xd3
+SIR
+Sub imm from byte at rel addr: *(*ad) = *(*ad) + imm
+imm,addr
+1,2
+R
+R
+R
+R
+10
+212
+0xd4
+SIV
+Sub imm byte from zero-page word: *V = *V - imm
+imm,V
+1,1
+R
+R
+R
+R
+8
+213
+0xd5
+SIW
+Sub imm byte from abs word: *addr = *addr - imm
+imm,addr
+1,2
+M
+M
+M
+M
+10
+214
+0xd6
+SIQ
+Sub imm byte from zero-page long Z: *Z = *Z - imm
+imm,Q
+1,1
+?
+?
+?
+?
+6..12
+215
+0xd7
+SIL
+Sub imm byte from long at abs address: *L = *L - imm
+imm,addr
+1,2
+?
+?
+?
+?
+8..14
+216
+0xd8
+SZZ
+Sub zero-page byte from Z byte: *Z2 = *Z2 - *Z1
+Z1,Z2
+1,1
+R
+R
+R
+R
+6
+217
+0xd9
+SZB
+Sub zero-page byte from abs byte: *addr = *addr - *Z
+Z,addr
+1,2
+R
+R
+R
+R
+8
+218
+0xda
+SZV
+Sub zero-page byte from zero-page word: *V = *V - *Z
+Z,V
+1,1
+R
+R
+R
+R
+9
+219
+0xdb
+SZW
+Sub zero-page byte from abs word: *addr = *addr - *Z
+Z,addr
+1,2
+M
+M
+M
+M
+11
+220
+0xdc
+SZQ
+Sub zero-page byte from zero-page long: *Q = *Q - *Z
+Z,Q
+1,1
+?
+?
+?
+?
+7..13
+221
+0xdd
+SZL
+Sub zero-page byte from long: *L = *L - *Z
+Z,addr
+1,2
+?
+?
+?
+?
+9..15
+222
+0xde
+SBZ
+Sub abs byte from zero-page byte: *Z = *Z - *addr
+addr,Z
+2,1
+R
+R
+R
+R
+8
+223
+0xdf
+SBB
+Sub abs byte from byte: *adr2 = *adr2 - *adr1
+adr1,adr2
+2,2
+R
+R
+R
+R
+10
+224
+0xe0
+SBV
+Sub abs byte from zero-page word: *V = *V - *addr
+addr,V
+2,1
+R
+R
+R
+R
+11
+225
+0xe1
+SBW
+Sub abs byte from word at adr2: *adr2 = *adr2 - *adr1
+adr1,adr2
+2,2
+M
+M
+M
+M
+13
+226
+0xe2
+SBQ
+Sub abs byte from zero-page long: *Q = *Q - *addr
+addr,Q
+2,1
+?
+?
+?
+?
+9..15
+227
+0xe3
+SVV
+Sub zero-page word from word: *V2 = *V2 - *V1
+V1,V2
+1,1
+M
+R
+R
+R
+14
+228
+0xe4
+CPI
+Compare immediate value to A: eval A - imm
+imm
+1
+-
+R
+R
+R
+3
+229
+0xe5
+CPZ
+Compare zero-page byte to A: eval A - *Z
+Z
+1
+-
+R
+R
+R
+4
+230
+0xe6
+CPB
+Compare byte at addr to A: eval A - *addr
+addr
+2
+-
+R
+R
+R
+6
+231
+0xe7
+CPT
+Compare byte at rel Z to A: eval A - *(*Z)
+rel Z
+1
+-
+R
+R
+R
+7
+232
+0xe8
+CPR
+Compare rel byte to A: eval A - *(*addr)
+rel addr
+2
+-
+R
+R
+R
+9
+233
+0xe9
+CIZ
+Compare imm to zero-page byte: A = *Z - imm
+imm,Z
+1,1
+R
+R
+R
+R
+5
+234
+0xea
+CIB
+Compare imm to byte at abs addr: A = *addr - imm
+imm,addr
+1,2
+R
+R
+R
+R
+7
+235
+0xeb
+CIT
+Compare imm to byte at rel Z: A = *(*Z) - imm
+imm,rel Z 
+1,1
+R
+R
+R
+R
+8
+236
+0xec
+CIR
+Compare imm to byte at rel addr: A = *(*addr) - imm
+imm,addr
+1,2
+R
+R
+R
+R
+10
+237
+0xed
+CZZ
+Compare zero-page byte to byte: A = *Z2 - *Z1
+Z1,Z2
+1,1
+R
+R
+R
+R
+6
+238
+0xee
+CZB
+Compare zero-page byte to byte: A = *addr - *Z
+Z,addr
+1,2
+R
+R
+R
+R
+8
+239
+0xef
+CBZ
+Compare abs byte to zero-page byte: A = *addr - *Z
+addr,Z
+2,1
+R
+R
+R
+R
+8
+240
+0xf0
+CBB
+Compare abs byte to byte: A = *adr2 - *adr1
+adr1,adr2
+2,2
+R
+R
+R
+R
+10
+241
+0xf1
+ACI
+Add immediate value to A with C: A = A + imm + C
+imm
+1
+R
+R
+R
+R
+3
+242
+0xf2
+ACZ
+Add zero-page byte with C to A: A = A + *Z + C
+Z
+1
+R
+R
+R
+R
+4
+243
+0xf3
+ACB
+Add byte at addr with C to A: A = A + *addr + C
+addr
+2
+R
+R
+R
+R
+6
+244
+0xf4
+AC.Z
+Add A with C to zero-page byte: *Z = *Z + A + C
+Z
+1
+R
+R
+R
+R
+4
+245
+0xf5
+AC.B
+Add A with C to byte at addr: *addr = *addr + A + C
+addr
+2
+R
+R
+R
+R
+6
+246
+0xf6
+ACV
+Add A with C to zero-page word
+V
+1
+M
+M
+M
+M
+7
+247
+0xf7
+ACW
+Add A with C to word at ads addr: *adr = *adr + A + C
+addr
+2
+M
+M
+M
+M
+9
+248
+0xf8
+SCI
+Sub imm value from A with C: A = A - imm - 1 + C
+imm
+1
+R
+R
+R
+R
+3
+249
+0xf9
+SCZ
+Sub zero-page byte with C from A: A = A - *Z - 1 + C
+Z
+1
+R
+R
+R
+R
+4
+250
+0xfa
+SCB
+Sub byte at addr from A with C: A = A - *addr - 1 + C
+addr
+2
+R
+R
+R
+R
+6
+251
+0xfb
+SC.Z
+Sub A with C from zero-page byte: *Z = *Z - A - 1 + C
+Z
+1
+R
+R
+R
+R
+5
+252
+0xfc
+SC.B
+Sub A with C from byte: *addr = *addr - A - 1 + C
+addr
+2
+R
+R
+R
+R
+7
+253
+0xfd
+SCV
+Sub A with C from zero-page word
+V
+1
+M
+M
+M
+M
+8
+254
+0xfe
+SCW
+Sub A with C from word at abs addr
+addr
+2
+M
+M
+M
+M
+10
+255
+0xff
+-
+Set bank register to 0xff (FLASH OFF) after boot-up
+-
+-
+-
+-
+-
+-
+2

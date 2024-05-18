@@ -9,7 +9,11 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./extension.js",
   "contributes": {
+    "capabilities": {
+      "hoverProvider": "true"
+    },
     "languages": [{
       "id": "m64x4asm",
       "aliases": ["Minimal 64x4 Assembly Language", "m64x4asm"],

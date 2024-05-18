@@ -4,13 +4,18 @@ Language and Grammar contributions for VSCODE to syntax highlight Minimal 64x4 A
 
 ## TODO
 
-* HoverProvider that provides opcode information
 * Autocomplete?
 * Diagnostics to show when arguments are incorrect?
 
 ## Screenshot
 
+Syntax highlighting
+
 ![image](./Screenshot%202024-05-10%20084005.png)
+
+Hover information for opcodes
+
+![image](./Screenshot%20at%202024-05-18%2016-35-40.png)
 
 ## Features
 
